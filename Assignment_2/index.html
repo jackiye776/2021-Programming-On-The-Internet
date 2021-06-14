@@ -1,0 +1,95 @@
+<!-- 
+// References:- 
+// JSON HTML - https://www.w3schools.com/js/js_json_html.asp
+// Trimming white spaces - https://www.w3schools.com/php/func_string_trim.asp
+// Open new window in same tab - https://stackoverflow.com/questions/8454510/open-url-in-same-window-and-in-same-tab
+// Regexp for number - https://stackoverflow.com/questions/19715303/regex-that-accepts-only-numbers-0-9-and-no-characters
+// Loop through input - https://www.geeksforgeeks.org/how-to-loop-through-input-elements-in-jquery/
+// Red Asterisk - Reference: Red asterisk https://csscreator.com/node/1007 */
+// Regexp for emails - https://www.w3resource.com/javascript/form/email-validation.php
+--> 
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Online Car Rental</title>
+        <link rel="stylesheet" href="styles.css">
+        <meta charset="UTF-8"/>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    </head>
+    <body>
+        <script type="text/javascript">
+            xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (xhttp.readyState == 4 && xhttp.status == 200) {
+                    var obj = JSON.parse(this.responseText)
+                    console.log(obj);
+                    var cars_data = ''; // Store the data into this variable, table format
+                    cars_data += '<tr>';
+                        cars_data += '<td> Thumbnail </td>';
+                        cars_data += '<td> Category </td>';
+                        cars_data += '<td> Availablity </td>';
+                        cars_data += '<td> Brand </td>';
+                        cars_data += '<td> Model </td>';
+                        cars_data += '<td> Model Year </td>';
+                        cars_data += '<td> Mileage </td>';
+                        cars_data += '<td> Fuel Type </td>';
+                        cars_data += '<td> Seats </td>';
+                        cars_data += '<td> Price per Day </td>';
+                        cars_data += '<td> Description </td>';
+                    cars_data += '</tr>';
+                    $.each(obj.cars, function(key, value) {
+                        cars_data += '<tr>';
+                        cars_data += '<td>' + "<img src='/images/" + value.model + ".jpg' style='width:250px; height:250px'>";
+                        cars_data += '<td>' + value.category + '</td>';
+                        cars_data += '<td>' + value.availability + '</td>';
+                        cars_data += '<td>' + value.brand + '</td>';
+                        cars_data += '<td>' + value.model + '</td>';
+                        cars_data += '<td>' + value.model_year + '</td>';
+                        cars_data += '<td>' + value.mileage + '</td>';
+                        cars_data += '<td>' + value.fuel_type + '</td>';
+                        cars_data += '<td>' + value.seats + '</td>';
+                        cars_data += '<td>' + value.price_per_day + '</td>';
+                        cars_data += '<td>' + value.description + '</td>';
+                        cars_data += '<td>' + "<button name='addToCart' onclick='addToCart( \" " + value.model + " \", " + value.availability + ", " + value.price_per_day +") '>Add to Cart" + '</button>' + '</td>';
+                        cars_data += '</tr>';
+                    });
+                    document.getElementById("cars_table").innerHTML = cars_data
+                }
+            };
+            xhttp.open("GET", "cars.json", true);
+            xhttp.send();
+            
+            
+            function addToCart(mod, avail, price) {
+                if(avail) {
+                    $.ajax({
+                        type: "POST",
+                        url: "addCart.php",
+                        data: { 
+                            model : mod, 
+                            availability : avail,
+                            price_per_day : price
+                        },
+                        success: function(response) {
+                            console.log(response);
+                            alert("Added to the cart successfully!")
+                            console.log("Added to the cart successfully!");
+                            
+                        }
+                    });
+                }
+                else {
+                    alert("Sorry. the car is not available now. Please try other cars");
+                    console.log("Sorry. the car is not available now. Please try other cars");
+                }
+            }
+        </script>
+        
+        <h1>Car Rental</h1>
+        <form action='viewCart.php' method='post'>
+        <button>Car Reservation</button>
+        </form>
+        <table id="cars_table" border="0">
+        </table>
+    </body>
+</html>

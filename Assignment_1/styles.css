@@ -1,0 +1,233 @@
+body {
+  font-family: "Times New Roman", Times, serif;
+  color: black;
+  display: block;
+  background-color: #ADD8E6;
+  overflow: hidden;
+  margin: 0px;
+}
+
+h1 {
+  background-color: #8f8ccf;
+  padding: 10px;
+  margin: 0px;
+}
+
+#productstyle {
+  overflow: hidden;
+}
+
+#cataloguestyle {
+  overflow: hidden;
+}
+
+#shopstyle {
+  overflow: scroll;
+}
+
+
+
+/* --------------------------------------------------- */
+
+/* index.html */
+.columnL {
+  float: left;
+  width: 50%;;
+  
+}
+
+.columnR {
+  float: left;
+  width: 50%;
+}
+
+
+/* iFrame */
+iframe {
+  border: 0;
+  width: 100%;
+}  
+
+.columnL:after, .columnR:after, .rowIndex:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* --------------------------------------------------- */
+
+/* Catalogue.html - Dropdown menu */
+.navbar {
+  overflow: hidden;
+  background-color: #1d3acc;
+  color: white;
+  text-align: center;
+  font-size: 20px;
+}
+
+.dropdown-category, .dropdown-product {
+  display: none;
+  position: absolute;
+  background-color: #6f69ff ;
+  width: 100%;
+  left: 0;
+  padding: 0px;
+  margin: 0px;
+  z-index: 1; /* Layer order */
+}
+
+
+
+.dropdown .dropbtn {
+  border: none;
+  outline: none;
+  color: inherit;
+  padding: 20px 26px;
+  margin: 0px;
+  position: relative;
+  font-family: inherit;
+}
+
+.dropBtnCat {
+  border: none;
+  outline: none;
+  color: inherit;
+  padding: 20px 20px;
+  position: relative;
+  float: left;
+  font-family: inherit;
+}
+
+
+.dropBtnPro {
+  border: none;
+  outline: none;
+  color: inherit;
+  padding: 20px 20px;
+  background-color: #6f69ff;
+  position: relative;
+  float: left;
+  font-family: inherit;
+  font-size: 15px;
+}
+
+
+.dropdown, .dropBtnCat {
+  float: left;
+}
+
+.navbar .dropbtn:hover {
+  background-color: red;
+}
+
+.navbar .dropBtnCat:hover, .dropBtnPro:hover {
+  background-color: #32136e;
+}
+
+.navbar .dropBtnPro:hover {
+  cursor: pointer;
+}
+
+
+
+/* Dropdown category then products*/
+.dropdown:hover .dropdown-category, #set1:hover .dropdown-product, #set2:hover .dropdown-product {
+  display: block;
+}
+
+/* --------------------------------------------------- */
+
+
+/* product.php */
+
+.productdetails {
+  margin: 20px;
+}
+
+.productdetails th {
+  padding: 10px;
+  font-size: 24px;
+}
+
+.productdetails td {
+  padding: 10px;
+  font-size: 18px;
+}
+
+.productdetails img {
+  margin-left: 20px;
+  padding-left: 10px;
+  width: 250px;
+  height: 150px;
+}
+
+/* shoppingCart.php */
+
+.cartHeading, .cartStyle {
+  font-size: 16px;
+}
+
+.cartHeading th{
+  width: 131px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background-color: #b6c4f2;
+}
+
+.cartStyle td{
+  width: 125px;
+  padding: 4px;
+  margin: 0px;
+}
+
+/* https://www.w3schools.com/css/css3_buttons.asp */
+
+.buttons {
+  background-color: #893cbd; 
+  border: none;
+  color: white;
+  padding: 15px 26px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.buttons:hover {
+  background-color: #0066ab
+}
+
+/* checkout.php */
+
+.checkoutTable th{
+  width: 131px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background-color: #b6c4f2;
+}
+
+.checkoutTable td{
+  width: 125px;
+  padding: 4px;
+  margin: 0px;
+}
+
+.checkout {
+  padding-left: 25px;
+}
+
+.formTable {
+  width: 100px;
+}
+
+.formTable td{
+  padding: 5px;
+}
+
+
+/* Reference: Red asterisk https://csscreator.com/node/1007 */
+
+.required {
+
+  color: red;
+}

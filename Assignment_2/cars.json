@@ -1,0 +1,124 @@
+{
+	"cars": [
+	    {
+			"category": "Sedan",
+			"availability": true,
+			"brand": "Toyota",
+			"model": "Camry",
+			"model_year": 2013,
+			"mileage": 10000,
+			"fuel_type": "Petrol",
+			"seats": 5,
+			"price_per_day": 120,
+			"description": "A Camry Car"
+		},
+		{
+			"category": "Sedan",
+			"availability": false,
+			"brand": "Toyota",
+			"model": "320i",
+			"model_year": 2010,
+			"mileage": 9000,
+			"fuel_type": "Petrol",
+			"seats": 4,
+			"price_per_day": 130,
+			"description": "A 320i Car"
+		},
+		{
+			"category": "SUV",
+			"availability": true,
+			"brand": "Toyota",
+			"model": "Captiva",
+			"model_year": 2015,
+			"mileage": 12000,
+			"fuel_type": "Petrol",
+			"seats": 4,
+			"price_per_day": 130,
+			"description": "A Captiva Car"
+		},
+		{
+			"category": "SUV",
+			"availability": false,
+			"brand": "Toyota",
+			"model": "Cherokee",
+			"model_year": 2019,
+			"mileage": 2000,
+			"fuel_type": "Petrol",
+			"seats": 5,
+			"price_per_day": 160,
+			"description": "A 320i Car"
+		},
+		{
+			"category": "Sedan",
+			"availability": true,
+			"brand": "Toyota",
+			"model": "Civic",
+			"model_year": 2020,
+			"mileage": 4000,
+			"fuel_type": "Petrol",
+			"seats": 4,
+			"price_per_day": 100,
+			"description": "A Civic Car"
+		},
+		{
+			"category": "Sedan",
+			"availability": false,
+			"brand": "Toyota",
+			"model": "GLC",
+			"model_year": 2012,
+			"mileage": 8000,
+			"fuel_type": "Petrol",
+			"seats": 5,
+			"price_per_day": 200,
+			"description": "A GLC Car"
+		},
+		{
+			"category": "Sedan",
+			"availability": true,
+			"brand": "Toyota",
+			"model": "Golf",
+			"model_year": 2008,
+			"mileage": 12000,
+			"fuel_type": "Petrol",
+			"seats": 4,
+			"price_per_day": 90,
+			"description": "A Golf Car"
+		},
+		{
+			"category": "Wagon",
+			"availability": true,
+			"brand": "Toyota",
+			"model": "Jimny",
+			"model_year": 2017,
+			"mileage": 9000,
+			"fuel_type": "Petrol",
+			"seats": 5,
+			"price_per_day": 180,
+			"description": "A Jimny Car"
+		},
+		{
+			"category": "Sedan",
+			"availability": true,
+			"brand": "Toyota",
+			"model": "Sonata",
+			"model_year": 2012,
+			"mileage": 8000,
+			"fuel_type": "Petrol",
+			"seats": 4,
+			"price_per_day": 200,
+			"description": "A Sonata Car"
+		},
+		{
+			"category": "SUV",
+			"availability": true,
+			"brand": "Toyota",
+			"model": "X-trail",
+			"model_year": 2014,
+			"mileage": 6500,
+			"fuel_type": "Petrol",
+			"seats": 5,
+			"price_per_day": 300,
+			"description": "A X-trail Car"
+		}
+	]
+}
